@@ -1,0 +1,21 @@
+{% trans %}
+Liebe/r {{ user_name }},
+
+Sie wurden zum internen Datenraum des BMBF eingeladen.
+
+Es wurde bereits ein Konto für sie angelegt, mit dem Usernamen {{ user_name }}. Sie können den Namen später ändern.
+
+Sie wurden zu der {{ group_type }} {{ group_title }} hinzugefügt mit der folgenden Rolle: {{ role_name }}.
+
+Um diese Einladung zu akzeptieren, ändern Sie ihr Passwort bitte unter folgendem Link:
+
+   {{ reset_link }}
+
+
+Viele Grüße
+
+Admin des Datenraums
+
+--
+Nachricht gesendet von {{ site_title }} ({{ site_url }})
+{% endtrans %}

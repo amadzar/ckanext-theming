@@ -1,0 +1,14 @@
+# theming-js:
+#   filter: rjsmin
+#   output: ckanext-theming/%(version)s-theming.js
+#   contents:
+#     - js/theming.js
+#   extra:
+#     preload:
+#       - base/main
+
+# theming-css:
+#   filter: cssrewrite
+#   output: ckanext-theming/%(version)s-theming.css
+#   contents:
+#     - css/theming.css

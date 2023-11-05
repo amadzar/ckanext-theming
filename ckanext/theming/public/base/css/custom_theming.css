@@ -1,0 +1,279 @@
+@font-face{
+  font-family:"BundesSans-Web";
+  src: url('/bundessans/BundesSans-Web-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'BundesSans-Web-RegularItalic';
+  src: url('/bundessans/BundesSans-Web-RegularItalic.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BundesSans-Web-Bold';
+  src: url('/bundessans/BundesSans-Web-Bold.woff2') format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'BundesSans-Web-BoldItalic';
+  src: url('/bundessans/BundesSans-Web-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+}
+
+h1 {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 26px;
+}
+
+h2 {
+  font-family: "BundesSans-Web-Bold", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 18px;
+}
+
+.media-overlay h2.media-heading {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h2.module-heading {
+  font-size: 17px;
+}
+
+h3 {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 1.3125rem;
+}
+
+div.tags > h3 {
+  font-weight: 400;
+}
+
+h3.stats-title {
+  font-size: 26px;
+}
+
+h4 {
+  font-family: "BundesSans-Web-Bold", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 17px;
+}
+
+h5 {
+  font-family: "BundesSans-Web-Bold", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 15px;
+}
+
+p {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 17px;
+}
+
+.site-footer .attribution p {
+  color: white;
+}
+
+a {
+  font-family: "BundesSans-Web-Bold", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 17px;
+  color: #004b76;
+}
+
+.masthead .main-navbar ul li:hover a, .masthead .main-navbar ul li:focus a, .masthead .main-navbar ul li.active a {
+  background-color: black;
+  color: white;
+}
+
+.module-narrow .nav-item > a, .module-narrow .nav-aside li a {
+  font-size: 16px;
+}
+
+ul.navbar-nav > li > a {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 16px;
+}
+
+ul.list-unstyled > li > a {
+  font-family: "BundesSans-Web", Georgia, Aral, "Times New Roman", Helvetica;
+}
+
+.masthead .main-navbar ul li a {
+  color: black;
+}
+
+.nav-tabs .nav-link, .page-header .nav-tabs li a {
+  color: #004b76;
+}
+
+div.module-promotion > div > p >  a {
+  font-size: 17px;
+}
+
+div.form-actions > p.action-info > a {
+  font-size: 11px;
+}
+
+figcaption {
+  font-family: "BundesSans-Web", Georgia, Arial, "Times New Roman", Helvetica;
+  font-size: 13px;
+}
+
+h2.dataset-heading > a {
+  font-size: 18px;
+}
+
+div.dataset-content > div {
+  font-size: 15px;
+}
+
+/* =====================================================
+   The "account masthead" bar across the top of the site
+   ===================================================== */
+
+.account-masthead {
+    background-color: black;
+}
+/* The "bubble" containing the number of new notifications. */
+.account-masthead .account .notifications a span {
+  background-color: black;
+}
+/* The text and icons in the user account info. */
+.account-masthead .account ul li a {
+  color: white;
+}
+/* The user account info text and icons, when the user's pointer is hovering
+   over them. */
+.account-masthead .account ul li a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: black;
+}
+
+
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+
+.masthead {
+  background: #fff;
+}
+/* The "navigation pills" in the masthead (the links to Datasets,
+   Organizations, etc) when the user's pointer hovers over them. */
+.masthead .navigation .nav-pills li a:hover {
+  background-color: rgb(48, 48, 48);
+  color: white;
+}
+/* The "active" navigation pill (for example, when you're on the /dataset page
+   the "Datasets" link is active). */
+.masthead .navigation .nav-pills li.active a {
+  background-color: black;
+}
+/* The "box shadow" effect that appears around the search box when it
+   has the keyboard cursor's focus. */
+.masthead input[type="text"]:focus {
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+/*The Logo */
+.masthead .navbar .logo img {
+    max-height: 120px;
+}
+
+/*The hero element behind the search bar */
+.homepage .hero {
+    background: #004b76;
+    padding: 30px;  
+}
+
+
+/* ===========================================
+   The content in the middle of the front page
+   =========================================== */
+
+/* Remove the "box shadow" effect around various boxes on the page. */
+.box {
+  box-shadow: none;
+}
+/* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
+   boxes. */
+.hero .box {
+  border: none;
+}
+/* Change the colors of the "Search Your Data" box. */
+.homepage .module-search .module-content {
+  color: rgb(68, 68, 68);
+  background-color: white;
+}
+/* Change the background color of the "Popular Tags" box. */
+.homepage .module-search .tags {
+  background-color: black;
+}
+/* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
+   and "Search Your Data" boxes line up. */
+.module-content:last-child {
+  padding-bottom: 20px;
+}
+.homepage .module-search {
+  padding: 0px;
+}
+/* Add a border line between the top and bottom halves of the front page. */
+.homepage [role="main"] {
+  border-top: 1px solid rgb(204, 204, 204);
+}
+
+/* Make sure text is centered through right padding in sensitive data and stats box */
+.homepage .module-stats .card {
+    padding: 4rem 1.75rem;
+}
+li.resource-item > div.uniq > a.btn {
+  background-color: #c0003c;
+  color: #fff;
+}
+
+/* The pagination buttons */
+.page-item.active .page-link{
+  background-color: #004b76;
+  border-color: #004b76;
+}
+
+.page-link {
+  color: #004b76;
+}
+
+/* The btn-primary buttons */
+.btn-primary {
+  background-color: #004b76;
+  border-color: #004b76;
+}
+
+
+
+/* ====================================
+   The footer at the bottom of the site
+   ==================================== */
+
+.site-footer,
+body {
+  background-color: black;
+}
+/* The text in the footer. */
+.site-footer,
+.site-footer label,
+.site-footer small {
+  color: white;
+}
+/* The link texts in the footer. */
+.site-footer a {
+  color: white;
+}
+
+/* The "Sprache" Font Settings */
+div.form-group > label {
+  font-weight: 400;
+}
+

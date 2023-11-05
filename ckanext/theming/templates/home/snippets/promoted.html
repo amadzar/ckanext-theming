@@ -1,0 +1,27 @@
+{% set intro = g.site_intro_text %}
+
+<div class="module-promotion card box">
+  <div>
+    {% if intro %}
+      {{ h.render_markdown(intro) }}
+    {% else %}
+      <h1 class="page-heading">{{ _("Willkommen im Datenraum") }}</h1>
+      <p>
+        {% trans %}Willkommen im internen Datenraum des Bundesministeriums für Bildung und Forschung. Auf dieser Plattform haben Sie die Möglichkeit, Daten über die Abteilungen und Referate hinweg zu teilen und für bestimmte Personen freizugeben.
+                   Möchten Sie direkt zu den <b>Datensätzen</b>? Dann klicken Sie <a href="/de/dataset/">hier</a>. Sind Sie auf der Suche nach einer bestimmten <b>Abteilung oder einem Referat</b>? Dann <a href="/de/organization/">hier</a> entlang. Weitere Informationen über den Datenraum finden Sie auf der <a href="/de/about">Über uns</a> Seite.
+        {% endtrans %}
+      </p>
+    {% endif %}
+  </div>
+
+  {% block home_image %}
+    <section class="featured media-overlay hidden-xs">
+      
+      {% block home_image_content %}
+        <a class="media-image" href="#">
+          <img class="img-fluid" src="{{ h.url_for_static('/base/images/282.jpg') }}" alt="BMBF bei Nacht" />
+        </a>
+      {% endblock %}
+    </section>
+  {% endblock %}
+</div>

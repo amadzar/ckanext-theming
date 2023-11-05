@@ -1,0 +1,82 @@
+{% set stats = h.get_site_statistics() %}
+
+<div class="module-stats flex-grow-1 mb-3">
+  <div class="card box h-100">
+    <h3 class="stats-title">{{ _('Statistik') }}</h3>
+    <ul class="stats-list">
+      {% block stats_group %}
+      <li class="stat-item">
+        <a href="{{ h.url_for('dataset.search') }}" class="stat-link">
+          <strong class="stat-count large">{{ h.SI_number_span(stats.dataset_count) }}</strong>
+          <span class="stat-label">{{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}</span>
+        </a>
+      </li>
+      <div class="vr"></div>
+      <li class="stat-item">
+        <a href="{{ h.url_for('organization.index') }}" class="stat-link">
+          <strong class="stat-count large">{{ h.SI_number_span(stats.organization_count) }}</strong>
+          <span class="stat-label">{{ _('organization') if stats.organization_count == 1 else _('organizations') }}</span>
+        </a>
+      </li>
+      <div class="vr"></div>
+      <li class="stat-item">
+        <a href="{{ h.url_for('group.index') }}" class="stat-link">
+          <strong class="stat-count large">{{ h.SI_number_span(stats.group_count) }}</strong>
+          <span class="stat-label">{{ _('group') if stats.group_count == 1 else _('groups') }}</span>
+        </a>
+      </li>
+      {% endblock %}
+    </ul>
+  </div>
+</div>
+
+<div class="module-stats flex-grow-1">
+    <div class="card box h-100">
+        <div class="d-flex flex-row align-items-center justify-content-between">
+          <div style="position: relative">
+            <img src="base/images/warning.png" width="100">
+          </div>  
+          <div class="card-body">
+            <h1 class="card-title">Hinweis zu sensiblen Daten</h1>
+            <p class="card-text">Es dürfen keine geschützten Daten, insbesondere personenbezogene, urheberrechtlich geschützte Daten oder Verschlusssachen, über den Datenraum bereitgestellt werden. Weitere Informationen <a href="/de/about">hier.</a></p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .stats-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .stats-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stat-item {
+    margin: 0 20px; /* Abstand zwischen den Statistik-Elementen */
+  }
+  
+  .stat-link {
+    text-align: center;
+    display: block;
+  }
+  
+  .stat-count {
+    font-weight: bold;
+    font-size: 36px; /* Größere Schrift für die Statistiken */
+    display: block;
+  }
+  
+  .stat-label {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+  }
+</style>
+

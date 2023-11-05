@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_custom %}
+  {{ form.input('custom_text', label=_('Aktualisierungsfrequenz'), id='field-custom_text', placeholder=_('Aktualisierungsfrequenz'), value=data.custom_text, error=errors.custom_text, classes=['control-medium']) }}
+
+  {{ form.input('loeschfrist', label=_('Löschfrist'), id='field-loeschfrist', placeholder=_('Loeschfrist eingeben'), value=data.loeschfrist, error=errors.loeschfrist, classes=['control-medium']) }}
+
+  {{ form.input('erzeugnisse', label=_('Nutzung für Datenerzeugnisse'), id='field-erzeugnisse', placeholder=_('Ja/Nein'), value=data.erzeugnisse, error=errors.erzeugnisse, classes=['control-medium']) }}
+{% endblock %}

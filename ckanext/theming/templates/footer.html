@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block footer_links_ckan %}
+ 
+  <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data"></a></li>
+{% endblock %}
+
+{% block footer_attribution %}
+  <p>{% trans %}Die eingesetzte Software ist <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>
+{% endblock %}
+
+{% block footer_lang %}
+  {% snippet "snippets/language_selector.html" %}
+{% endblock %}
